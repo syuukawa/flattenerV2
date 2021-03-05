@@ -1,0 +1,29 @@
+{
+  "name": "contracts2",
+  "version": "1.0.0",
+  "description": "Version 2 of the smart contracts for the bZx protocol and external integrations",
+  "keywords": [],
+  "author": "bZeroX LLC 2020",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/bZxNetwork/contractsV2#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bZxNetwork/contractsV2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bZxNetwork/contractsV2/issues"
+  },
+  "devDependencies": {
+    "@openzeppelin/contracts": "^3.3.0"
+  },
+  "scripts": {
+    "analyize-contracts": "slither .",
+    "lint-contracts": "solhint contracts/**/*.sol",
+    "test": "brownie test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit-disabled": "yarn analyize-contracts && yarn lint-contracts && yarn test"
+    }
+  }
+}
